@@ -17,3 +17,4 @@ class Sqoin {
 		return Sqoin.getInstance().get(type)
 	}
 }
+

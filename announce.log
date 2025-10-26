@@ -788,3 +788,69 @@ Strict-Transport-Security: max-age=63072000
 
 
 ----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sun, 26 Oct 2025 10:49:22 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.thijn.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Sun, 26 Oct 2025 10:49:27 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+X-VCMP-Error: Invalid request - Server unreachable
+Strict-Transport-Security: max-age=63072000
+
+0
+
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sun, 26 Oct 2025 10:51:30 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sun, 26 Oct 2025 10:51:39 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------

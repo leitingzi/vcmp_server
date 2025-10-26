@@ -89,11 +89,11 @@ function onScriptLoad() {
 
 		module.single("UserRepository", function(sqoin) {
 			return UserRepository(sqoin.get("Logger"));
-		})
+		});
 
 		module.factory("UserService", function(sqoin) {
 			return UserService(sqoin.get("UserRepository"), sqoin.get("Logger"));
-		})
+		});
 	});
 
 	local modules = [serverModule];
