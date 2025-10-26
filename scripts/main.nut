@@ -72,7 +72,6 @@ class UserService {
 }
 
 function onScriptLoad() {
-	// server info is printed in the console
 	print("------------------------------------");
 	print("Server name: " + SRV_NAME);
 	if (SRV_PASS != "") print("Password: " + SRV_PASS);
