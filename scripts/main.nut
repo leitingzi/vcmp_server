@@ -35,8 +35,14 @@ function onServerStop()
 */
 
 class Logger {
+	id = null;
+
+	constructor(id) {
+		this.id = id;
+	}
+
 	function log(message) {
-		print("Log: " + message);
+		print("Log" + id + ": " + message);
 	}
 }
 
@@ -83,7 +89,7 @@ function onScriptLoad() {
 
 	local serverModule = Module(function(module) {
 		module.single("Logger", function(sqoin) {
-			return Logger();
+			return Logger(10);
 		});
 
 		module.single("UserRepository", function(sqoin) {
@@ -93,18 +99,29 @@ function onScriptLoad() {
 		module.factory("UserService", function(sqoin) {
 			return UserService(sqoin.get("UserRepository"), sqoin.get("Logger"));
 		});
+
+		module.single("name", function(sqoin) {
+			return "pq";
+		});
 	});
 
 	local modules = [serverModule];
 
 	Sqoin.loadModules(modules);
 
+	local logger = Sqoin.get("Logger");
+	logger.log(123);
+
 	local userService1 = Sqoin.get("UserService");
 	local userService2 = Sqoin.get("UserService");
 
 	userService1.getUserInfo(123);
 	userService2.getUserInfo(456);
+
+	local name = Sqoin.get("name");
+	print(name);
 }
+
 
 function onScriptUnload() {}
 

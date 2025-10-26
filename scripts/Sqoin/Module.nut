@@ -2,7 +2,7 @@ class Module {
 	bindings = null;
 
 	constructor(configure) {
-		this.bindings = []
+		this.bindings = [];
 		if (configure != null) {
 			configure(this);
 		}

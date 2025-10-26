@@ -33,6 +33,7 @@ class SqoinContext {
 	}
 
 	function get(type) {
+		print("get: " + type);
 		// print("SqoinContext get: " + type);
 
 		if (this.singletons.rawin(type)) {
