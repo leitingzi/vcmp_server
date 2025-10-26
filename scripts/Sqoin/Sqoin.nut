@@ -6,7 +6,7 @@ class Sqoin {
 	}
 
 	static function loadModules(modules) {
-		print("Sqoin loadModules");
+		// print("Sqoin loadModules");
 		foreach(module in modules) {
 			print("Sqoin load " + module);
 			Sqoin.getInstance().loadModule(module);

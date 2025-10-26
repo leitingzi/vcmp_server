@@ -9,7 +9,7 @@ class Module {
 	}
 
 	function single(type, provider) {
-		print("module single: " + type);
+		// print("module single: " + type);
 		this.bindings.append({
 			type = "single",
 			targetType = type,
@@ -18,7 +18,7 @@ class Module {
 	}
 
 	function factory(type, provider) {
-		print("module factory: " + type);
+		// print("module factory: " + type);
 		this.bindings.append({
 			type = "factory",
 			targetType = type,
@@ -27,13 +27,13 @@ class Module {
 	}
 
 	function register(context) {
-		print("module register");
+		// print("module register");
 		foreach(binding in this.bindings) {
 			if (binding.type == "single") {
-				print("single");
+				// print("single");
 				context.registerSingleton(binding.targetType, binding.provider)
 			} else if (binding.type == "factory") {
-				print("factory");
+				// print("factory");
 				context.registerFactory(binding.targetType, binding.provider)
 			}
 		}

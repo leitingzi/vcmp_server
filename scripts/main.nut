@@ -77,7 +77,6 @@ function onScriptLoad() {
 	if (SRV_PASS != "") print("Password: " + SRV_PASS);
 	print("------------------------------------");
 
-	// pq
 	dofile("scripts/Sqoin/SqoinContext.nut");
 	dofile("scripts/Sqoin/Module.nut");
 	dofile("scripts/Sqoin/Sqoin.nut");
