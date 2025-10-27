@@ -6,15 +6,12 @@ class Sqoin {
 	}
 
 	static function loadModules(modules) {
-		// print("Sqoin loadModules");
 		foreach(module in modules) {
-			print("Sqoin load " + module);
 			Sqoin.getInstance().loadModule(module);
 		}
 	}
 
-	static function get(type) {
-		return Sqoin.getInstance().get(type)
+	static function get(type, args = {}) {
+		return Sqoin.getInstance().get(type, args);
 	}
 }
-

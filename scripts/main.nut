@@ -35,6 +35,10 @@ function onServerStop()
 */
 
 class Logger {
+	id = null;
+	constructor(id) {
+		this.id = id;
+	}
 	function log(message) {
 		print("Log: " + message);
 	}
@@ -81,9 +85,9 @@ function onScriptLoad() {
 	dofile("scripts/Sqoin/Module.nut");
 	dofile("scripts/Sqoin/Sqoin.nut");
 
-	local serverModule = Module(function(module) {
-		module.single("Logger", function(sqoin) {
-			return Logger();
+	local userModule = Module(function(module) {
+		module.single("Logger", function(sqoin, args) {
+			return Logger(args.id);
 		});
 
 		module.single("UserRepository", function(sqoin) {
@@ -95,9 +99,13 @@ function onScriptLoad() {
 		});
 	});
 
-	local modules = [serverModule];
+	local modules = [userModule];
 
 	Sqoin.loadModules(modules);
+
+	local logger = Sqoin.get("Logger", {
+		id = 10
+	});
 
 	local userService1 = Sqoin.get("UserService");
 	local userService2 = Sqoin.get("UserService");
