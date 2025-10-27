@@ -105,7 +105,8 @@ function onScriptLoad() {
 
 	Sqoin.loadModules(modules);
 
-	local logger = Sqoin.get("Logger", {
+	local logger1 = Sqoin.get("Logger");
+	local logger2 = Sqoin.get("Logger", {
 		id = 2
 	});
 
