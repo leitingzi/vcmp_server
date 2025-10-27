@@ -3,15 +3,17 @@ class SqoinContext {
 	singletons = null;
 	factories = null;
 
+	enableLogger = true;
+
 	constructor() {
 		this.modules = [];
 		this.singletons = {};
 		this.factories = {};
-		log("Initialized dependency injection context");
+		print("SqoinContext initialized dependency injection context.");
 	}
 
 	static function log(message) {
-		if (!Sqoin.enableLog) return;
+		if (!enableLogger) return;
 		print("[SqoinContext] " + message);
 	}
 
@@ -62,14 +64,8 @@ class SqoinContext {
 		});
 	}
 
-<<<<<<< HEAD
-	function get(type) {
-		print("get: " + type);
-		// print("SqoinContext get: " + type);
-=======
 	function get(type, args = null) {
 		log("Attempting to resolve dependency: " + type);
->>>>>>> 67f421a55f4948ab3158b726b5fa15e223dc602f
 
 		if (this.singletons.rawin(type)) {
 			log("Found singleton dependency: " + type);
@@ -82,7 +78,8 @@ class SqoinContext {
 
 		if (this.factories.rawin(type)) {
 			log("Found factory dependency: " + type);
-			return this.factories[type].provider(this, args != null ? args : singleton.params);
+			local factory = this.factories[type];
+			return factory.provider(this, args != null ? args : factory.params);
 		}
 
 		throw "No provider found for type: " + type;

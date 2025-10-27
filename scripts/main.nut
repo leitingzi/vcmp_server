@@ -36,17 +36,9 @@ function onServerStop()
 
 class Logger {
 	id = null;
-<<<<<<< HEAD
-
 	constructor(id) {
 		this.id = id;
 	}
-
-=======
-	constructor(id) {
-		this.id = id;
-	}
->>>>>>> 67f421a55f4948ab3158b726b5fa15e223dc602f
 	function log(message) {
 		print("Log" + id + ": " + message);
 	}
@@ -93,7 +85,7 @@ function onScriptLoad() {
 	dofile("scripts/Sqoin/Module.nut");
 	dofile("scripts/Sqoin/Sqoin.nut");
 
-	Sqoin.enableLog = true;
+	Sqoin.enableLogger(false);
 
 	local userModule = Module(function(module) {
 		module.factory("Logger", function(sqoin, args) {
@@ -102,15 +94,15 @@ function onScriptLoad() {
 			id = 1
 		});
 
-		module.single("UserRepository", function(sqoin) {
+		module.single("UserRepository", function(sqoin, args) {
 			return UserRepository(sqoin.get("Logger"));
 		});
 
-		module.factory("UserService", function(sqoin) {
+		module.factory("UserService", function(sqoin, args) {
 			return UserService(sqoin.get("UserRepository"), sqoin.get("Logger"));
 		});
 
-		module.single("name", function(sqoin) {
+		module.single("name", function(sqoin, args) {
 			return "pq";
 		});
 	});
@@ -119,15 +111,10 @@ function onScriptLoad() {
 
 	Sqoin.loadModules(modules);
 
-<<<<<<< HEAD
-	local logger = Sqoin.get("Logger");
-	logger.log(123);
-=======
 	local logger1 = Sqoin.get("Logger");
 	local logger2 = Sqoin.get("Logger", {
 		id = 2
 	});
->>>>>>> 67f421a55f4948ab3158b726b5fa15e223dc602f
 
 	local userService1 = Sqoin.get("UserService");
 	local userService2 = Sqoin.get("UserService");
