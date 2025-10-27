@@ -11,6 +11,7 @@ class SqoinContext {
 	}
 
 	static function log(message) {
+		if (!Sqoin.enableLog) return;
 		print("[SqoinContext] " + message);
 	}
 

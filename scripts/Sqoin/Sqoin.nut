@@ -1,5 +1,6 @@
 class Sqoin {
 	static instance = SqoinContext();
+	static enableLog = false;
 
 	static function getInstance() {
 		return Sqoin.instance;

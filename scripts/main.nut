@@ -85,8 +85,10 @@ function onScriptLoad() {
 	dofile("scripts/Sqoin/Module.nut");
 	dofile("scripts/Sqoin/Sqoin.nut");
 
+	Sqoin.enableLog = true;
+
 	local userModule = Module(function(module) {
-		module.single("Logger", function(sqoin, args) {
+		module.factory("Logger", function(sqoin, args) {
 			return Logger(args.id);
 		}, {
 			id = 1
