@@ -88,6 +88,8 @@ function onScriptLoad() {
 	local userModule = Module(function(module) {
 		module.single("Logger", function(sqoin, args) {
 			return Logger(args.id);
+		}, {
+			id = 1
 		});
 
 		module.single("UserRepository", function(sqoin) {
@@ -104,7 +106,7 @@ function onScriptLoad() {
 	Sqoin.loadModules(modules);
 
 	local logger = Sqoin.get("Logger", {
-		id = 10
+		id = 2
 	});
 
 	local userService1 = Sqoin.get("UserService");

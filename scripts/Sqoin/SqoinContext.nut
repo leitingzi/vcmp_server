@@ -10,11 +10,36 @@ class SqoinContext {
 		log("Initialized dependency injection context");
 	}
 
+	static function log(message) {
+		print("[SqoinContext] " + message);
+	}
+
 	function loadModule(module) {
 		log("Loading module: " + module);
 		this.modules.append(module);
 		module.register(this);
 		log("Module loaded successfully: " + module);
+	}
+
+	function removeModule(module) {
+		local index = this.modules.find(module);
+		if (index == -1) {
+			log("Module not found: " + module);
+			return;
+		}
+
+		local bindingTypes = module.getBindingTypes();
+		foreach(type in bindingTypes) {
+			if (this.singletons.rawin(type)) {
+				this.singletons.rawdelete(type);
+			}
+			if (this.factories.rawin(type)) {
+				this.factories.rawdelete(type);
+			}
+		}
+
+		this.modules.remove(index);
+		log("Module removed successfully: " + module);
 	}
 
 	function registerSingleton(type, provider, params = {}) {
@@ -54,9 +79,5 @@ class SqoinContext {
 		}
 
 		throw "No provider found for type: " + type;
-	}
-
-	function log(message) {
-		print("[SqoinContext] " + message);
 	}
 }

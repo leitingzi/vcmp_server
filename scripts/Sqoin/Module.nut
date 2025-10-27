@@ -35,4 +35,12 @@ class Module {
 			}
 		}
 	}
+
+	function getBindingTypes() {
+		local types = [];
+		foreach(binding in this.bindings) {
+			types.append(binding.targetType);
+		}
+		return types;
+	}
 }

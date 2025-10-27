@@ -11,6 +11,10 @@ class Sqoin {
 		}
 	}
 
+	static function removeModule(module) {
+		Sqoin.getInstance().removeModule(module);
+	}
+
 	static function get(type, args = {}) {
 		return Sqoin.getInstance().get(type, args);
 	}
