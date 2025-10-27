@@ -8,34 +8,39 @@ class Module {
 		}
 	}
 
-	function single(type, provider) {
-		// print("module single: " + type);
+	function single(type, provider, params = {}) {
 		this.bindings.append({
 			type = "single",
 			targetType = type,
-			provider = provider
+			provider = provider,
+			params = params
 		});
 	}
 
-	function factory(type, provider) {
-		// print("module factory: " + type);
+	function factory(type, provider, params = {}) {
 		this.bindings.append({
 			type = "factory",
 			targetType = type,
-			provider = provider
+			provider = provider,
+			params = params
 		});
 	}
 
 	function register(context) {
-		// print("module register");
 		foreach(binding in this.bindings) {
 			if (binding.type == "single") {
-				// print("single");
-				context.registerSingleton(binding.targetType, binding.provider)
+				context.registerSingleton(binding.targetType, binding.provider, binding.params);
 			} else if (binding.type == "factory") {
-				// print("factory");
-				context.registerFactory(binding.targetType, binding.provider)
+				context.registerFactory(binding.targetType, binding.provider, binding.params);
 			}
 		}
+	}
+
+	function getBindingTypes() {
+		local types = [];
+		foreach(binding in this.bindings) {
+			types.append(binding.targetType);
+		}
+		return types;
 	}
 }
