@@ -61,21 +61,21 @@ class SqoinContext {
 		});
 	}
 
-	function get(type, args = {}) {
+	function get(type, args = null) {
 		log("Attempting to resolve dependency: " + type);
 
 		if (this.singletons.rawin(type)) {
 			log("Found singleton dependency: " + type);
 			local singleton = this.singletons[type];
 			if (singleton.instance == null) {
-				singleton.instance = singleton.provider(this, args);
+				singleton.instance = singleton.provider(this, args != null ? args : singleton.params);
 			}
 			return singleton.instance;
 		}
 
 		if (this.factories.rawin(type)) {
 			log("Found factory dependency: " + type);
-			return this.factories[type].provider(this, args);
+			return this.factories[type].provider(this, args != null ? args : singleton.params);
 		}
 
 		throw "No provider found for type: " + type;
