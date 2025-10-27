@@ -40,7 +40,7 @@ class Logger {
 		this.id = id;
 	}
 	function log(message) {
-		print("Log: " + message);
+		print("Log" + id + ": " + message);
 	}
 }
 
