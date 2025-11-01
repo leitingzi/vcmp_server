@@ -19,7 +19,7 @@ class Sqoin {
 		Sqoin.getInstance().removeModule(module);
 	}
 
-	static function get(type, args = null) {
+	static function get(type, args = @(sqoin) null) {
 		return Sqoin.getInstance().get(type, args);
 	}
 }

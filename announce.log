@@ -1690,3 +1690,616 @@ Connection: close
 </html>
 
 ----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:36:46 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:37:08 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:39:33 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:40:04 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:42:32 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:43:34 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:43:58 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.thijn.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Sat, 01 Nov 2025 04:44:01 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+X-VCMP-Error: Invalid request - Server unreachable
+Strict-Transport-Security: max-age=63072000
+
+0
+
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:44:46 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:45:24 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:45:56 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:47:03 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:51:28 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:51:46 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.thijn.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Sat, 01 Nov 2025 04:51:50 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+X-VCMP-Error: Invalid request - Server unreachable
+Strict-Transport-Security: max-age=63072000
+
+0
+
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:52:11 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:53:18 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:58:37 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:59:15 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 04:59:40 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 05:00:37 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 05:01:00 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.thijn.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Sat, 01 Nov 2025 05:01:03 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+X-VCMP-Error: Invalid request - Server unreachable
+Strict-Transport-Security: max-age=63072000
+
+0
+
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 05:02:05 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.thijn.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Sat, 01 Nov 2025 05:02:09 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+X-VCMP-Error: Invalid request - Server unreachable
+Strict-Transport-Security: max-age=63072000
+
+0
+
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 05:02:37 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.thijn.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Sat, 01 Nov 2025 05:02:41 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+X-VCMP-Error: Invalid request - Server unreachable
+Strict-Transport-Security: max-age=63072000
+
+0
+
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 05:03:05 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.thijn.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Sat, 01 Nov 2025 05:03:09 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+X-VCMP-Error: Invalid request - Server unreachable
+Strict-Transport-Security: max-age=63072000
+
+0
+
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 05:04:11 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.thijn.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Sat, 01 Nov 2025 05:04:16 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+X-VCMP-Error: Invalid request - Server unreachable
+Strict-Transport-Security: max-age=63072000
+
+0
+
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 05:05:21 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 05:06:16 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.thijn.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Sat, 01 Nov 2025 05:06:20 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+X-VCMP-Error: Invalid request - Server unreachable
+Strict-Transport-Security: max-age=63072000
+
+0
+
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 05:08:47 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 05:09:31 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------
+master.adtec.ovh: Did not receive an HTTP/1.1 200 OK response. Full response follows:
+---------------------- Begin response ----------------------
+HTTP/1.1 405 Not Allowed
+Date: Sat, 01 Nov 2025 05:09:49 GMT
+Content-Type: text/html
+Content-Length: 157
+Connection: close
+
+<html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.18.0</center>
+</body>
+</html>
+
+----------------------- End response -----------------------

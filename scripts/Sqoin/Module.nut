@@ -8,7 +8,7 @@ class Module {
 		}
 	}
 
-	function single(type, provider, params = {}) {
+	function single(type, provider, params = @(sqoin) {}) {
 		this.bindings.append({
 			type = "single",
 			targetType = type,
@@ -17,7 +17,7 @@ class Module {
 		});
 	}
 
-	function factory(type, provider, params = {}) {
+	function factory(type, provider, params = @(sqoin) {}) {
 		this.bindings.append({
 			type = "factory",
 			targetType = type,

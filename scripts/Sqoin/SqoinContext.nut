@@ -45,7 +45,7 @@ class SqoinContext {
 		log("Module removed successfully: " + module);
 	}
 
-	function registerSingleton(type, provider, params = {}) {
+	function registerSingleton(type, provider, params = @(sqoin) {}) {
 		log("Registering singleton dependency: " + type);
 		this.singletons.rawset(type, {
 			type = type,
@@ -55,7 +55,7 @@ class SqoinContext {
 		});
 	}
 
-	function registerFactory(type, provider, params = {}) {
+	function registerFactory(type, provider, params = @(sqoin) {}) {
 		log("Registering factory dependency: " + type);
 		this.factories.rawset(type, {
 			type = type,
@@ -64,14 +64,15 @@ class SqoinContext {
 		});
 	}
 
-	function get(type, args = null) {
+	function get(type, args = @(sqoin) null) {
 		log("Attempting to resolve dependency: " + type);
 
 		if (this.singletons.rawin(type)) {
 			log("Found singleton dependency: " + type);
 			local singleton = this.singletons[type];
 			if (singleton.instance == null) {
-				singleton.instance = singleton.provider(this, args != null ? args : singleton.params);
+				local params = args(this) != null ? args(this) : singleton.params(this);
+				singleton.instance = singleton.provider(this, params);
 			}
 			return singleton.instance;
 		}
@@ -79,7 +80,8 @@ class SqoinContext {
 		if (this.factories.rawin(type)) {
 			log("Found factory dependency: " + type);
 			local factory = this.factories[type];
-			return factory.provider(this, args != null ? args : factory.params);
+			local params = args(this) != null ? args(this) : factory.params(this);
+			return factory.provider(this, params);
 		}
 
 		throw "No provider found for type: " + type;
