@@ -124,6 +124,8 @@ function onScriptLoad() {
 
 	local name = Sqoin.get("name");
 	print(name);
+
+	Sqoin.removeModule(userModule);
 }
 
 
