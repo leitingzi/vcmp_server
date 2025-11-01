@@ -15,6 +15,10 @@ class Sqoin {
 		}
 	}
 
+	static function loadModule(module) {
+		Sqoin.getInstance().loadModule(module);
+	}
+
 	static function removeModule(module) {
 		Sqoin.getInstance().removeModule(module);
 	}
