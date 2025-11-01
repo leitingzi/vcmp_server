@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sqoin 依赖注入框架使用说明文档</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: #333;
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        .code-block {
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            padding: 15px;
+            font-family: "Courier New", monospace;
+            overflow-x: auto;
+            margin: 1em 0;
+            white-space: pre; /* 保持代码中的换行和空格 */
+        }
+        .example {
+            background-color: #f0f7ff;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 1em 0;
+        }
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 1em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .section {
+            margin-bottom: 2em;
+        }
+        .toc {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 2em;
+        }
+        .toc h3 {
+            margin-top: 0;
+        }
+        .toc a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sqoin 依赖注入框架使用说明文档</h1>
+
+    <div class="toc">
+        <h3>目录</h3>
+        <ul>
+            <li><a href="#overview">1. 概述</a></li>
+            <li><a href="#core-classes">2. 核心类说明</a>
+                <ul>
+                    <li><a href="#module-class">2.1 Module 类</a></li>
+                    <li><a href="#sqoin-class">2.2 Sqoin 类</a></li>
+                    <li><a href="#sqoincontext-class">2.3 SqoinContext 类</a></li>
+                </ul>
+            </li>
+            <li><a href="#usage-steps">3. 使用步骤</a>
+                <ul>
+                    <li><a href="#basic-flow">3.1 基本使用流程</a></li>
+                    <li><a href="#detailed-steps">3.2 详细步骤说明</a></li>
+                </ul>
+            </li>
+            <li><a href="#dependency-types">4. 依赖类型详解</a>
+                <ul>
+                    <li><a href="#singleton">4.1 单例(Singleton)</a></li>
+                    <li><a href="#factory">4.2 工厂(Factory)</a></li>
+                </ul>
+            </li>
+            <li><a href="#complete-example">5. 完整示例</a></li>
+            <li><a href="#advanced-operations">6. 高级操作</a></li>
+            <li><a href="#notes">7. 注意事项</a></li>
+        </ul>
+    </div>
+
+    <div class="section" id="overview">
+        <h2>1. 概述</h2>
+        <p>Sqoin 是一个轻量级的依赖注入(DI)框架，基于 Squirrel 语言实现。它通过模块管理依赖关系，支持单例(singleton)和工厂(factory)两种依赖类型，帮助开发者实现松耦合的代码设计。</p>
+    </div>
+
+    <div class="section" id="core-classes">
+        <h2>2. 核心类说明</h2>
+
+        <div id="module-class">
+            <h3>2.1 Module 类</h3>
+            <p>模块类，用于定义一组相关的依赖绑定。</p>
+
+            <h4>主要属性</h4>
+            <ul>
+                <li><code>bindings</code>: 存储模块中定义的所有依赖绑定</li>
+            </ul>
+
+            <h4>构造函数</h4>
+            <div class="code-block">
+constructor(configure)
+            </div>
+            <ul>
+                <li>参数 <code>configure</code>: 配置函数，用于定义模块中的依赖绑定</li>
+                <li>示例: <code>local module = Module(function(m) { ... })</code></li>
+            </ul>
+
+            <h4>主要方法</h4>
+            <ol>
+                <li>
+                    <strong>single(type, provider, params = {})</strong>
+                    <ul>
+                        <li>注册单例依赖</li>
+                        <li>参数:
+                            <ul>
+                                <li><code>type</code>: 依赖类型标识(字符串)</li>
+                                <li><code>provider</code>: 依赖提供者函数，用于创建实例</li>
+                                <li><code>params</code>: 可选参数，创建实例时使用的默认参数</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>factory(type, provider, params = {})</strong>
+                    <ul>
+                        <li>注册工厂依赖(每次获取都会创建新实例)</li>
+                        <li>参数同 <code>single</code> 方法</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>register(context)</strong>
+                    <ul>
+                        <li>将模块中的绑定注册到依赖上下文</li>
+                        <li>通常由框架自动调用，无需手动使用</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>getBindingTypes()</strong>
+                    <ul>
+                        <li>返回模块中所有绑定的类型标识数组</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div id="sqoin-class">
+            <h3>2.2 Sqoin 类</h3>
+            <p>框架入口类，提供静态方法访问依赖注入功能。</p>
+
+            <h4>主要静态方法</h4>
+            <ol>
+                <li>
+                    <strong>getInstance()</strong>
+                    <ul>
+                        <li>获取 Sqoin 上下文实例</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>enableLogger(bool = true)</strong>
+                    <ul>
+                        <li>启用/禁用日志输出</li>
+                        <li>参数 <code>bool</code>: 布尔值，true 启用日志，false 禁用</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>loadModules(modules)</strong>
+                    <ul>
+                        <li>加载多个模块</li>
+                        <li>参数 <code>modules</code>: 模块数组</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>removeModule(module)</strong>
+                    <ul>
+                        <li>移除已加载的模块(同时移除其注册的依赖)</li>
+                        <li>参数 <code>module</code>: 要移除的模块实例</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>get(type, args = null)</strong>
+                    <ul>
+                        <li>获取指定类型的依赖实例</li>
+                        <li>参数:
+                            <ul>
+                                <li><code>type</code>: 依赖类型标识</li>
+                                <li><code>args</code>: 可选参数，覆盖默认参数</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div id="sqoincontext-class">
+            <h3>2.3 SqoinContext 类</h3>
+            <p>依赖上下文类，负责管理模块和依赖实例的创建。</p>
+
+            <h4>主要功能</h4>
+            <ul>
+                <li>管理已加载的模块</li>
+                <li>维护单例实例缓存</li>
+                <li>处理依赖的解析和实例化</li>
+                <li>提供日志功能</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section" id="usage-steps">
+        <h2>3. 使用步骤</h2>
+
+        <div id="basic-flow">
+            <h3>3.1 基本使用流程</h3>
+            <ol>
+                <li><strong>创建模块</strong> - 定义依赖绑定关系</li>
+                <li><strong>加载模块</strong> - 将模块加载到 Sqoin 框架</li>
+                <li><strong>获取依赖</strong> - 通过 Sqoin.get() 获取所需实例</li>
+            </ol>
+        </div>
+
+        <div id="detailed-steps">
+            <h3>3.2 详细步骤说明</h3>
+
+            <h4>步骤 1: 创建模块</h4>
+            <p>使用 <code>Module</code> 类创建模块，并通过配置函数定义依赖绑定:</p>
+            <div class="code-block">
+local myModule = Module(function(module) {
+  // 注册单例依赖
+  module.single("Service", function(sqoin, params) {
+    return MyService(params);
+  }, { option: true });
+  
+  // 注册工厂依赖
+  module.factory("Repository", function(sqoin, params) {
+    return MyRepository(sqoin.get("Service"), params);
+  });
+});
+            </div>
+            <p>提供者函数(provider)接收两个参数:</p>
+            <ul>
+                <li><code>sqoin</code>: Sqoin 上下文实例，用于获取其他依赖</li>
+                <li><code>params</code>: 参数对象，来自注册时的默认参数或获取时的传入参数</li>
+            </ul>
+
+            <h4>步骤 2: 加载模块</h4>
+            <p>使用 <code>Sqoin.loadModules()</code> 加载模块:</p>
+            <div class="code-block">
+// 单个模块
+Sqoin.loadModules([myModule]);
+
+// 多个模块
+Sqoin.loadModules([module1, module2, module3]);
+            </div>
+
+            <h4>步骤 3: 获取依赖实例</h4>
+            <p>使用 <code>Sqoin.get()</code> 方法获取依赖实例:</p>
+            <div class="code-block">
+// 获取单例实例(首次调用创建，后续返回同一实例)
+local service = Sqoin.get("Service");
+
+// 获取工厂实例(每次调用创建新实例)
+local repo1 = Sqoin.get("Repository");
+local repo2 = Sqoin.get("Repository"); // 与 repo1 是不同实例
+
+// 传递参数(覆盖默认参数)
+local repo3 = Sqoin.get("Repository", { cache: false });
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="dependency-types">
+        <h2>4. 依赖类型详解</h2>
+
+        <div id="singleton">
+            <h3>4.1 单例(Singleton)</h3>
+            <ul>
+                <li>使用 <code>module.single()</code> 注册</li>
+                <li>特点: 首次获取时创建实例，之后每次获取返回同一实例</li>
+                <li>适用场景: 无状态服务、工具类等需要全局唯一的组件</li>
+            </ul>
+        </div>
+
+        <div id="factory">
+            <h3>4.2 工厂(Factory)</h3>
+            <ul>
+                <li>使用 <code>module.factory()</code> 注册</li>
+                <li>特点: 每次获取时都通过提供者函数创建新实例</li>
+                <li>适用场景: 有状态对象、需要不同参数配置的实例等</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section" id="complete-example">
+        <h2>5. 完整示例</h2>
+        <p>以下示例展示了如何使用 Sqoin 框架管理日志器、数据仓库和服务之间的依赖关系:</p>
+        
+        <div class="code-block">
+// 定义业务类
+class Logger {
+  id = null;
+  constructor(id) {
+    this.id = id;
+  }
+  function log(message) {
+    print("Log" + this.id + ": " + message);
+  }
+}
+
+class UserRepository {
+  logger = null;
+  constructor(logger) {
+    this.logger = logger;
+  }
+  function getUser(id) {
+    this.logger.log("Getting user with id: " + id);
+    return { id: id, name: "User " + id };
+  }
+}
+
+class UserService {
+  repo = null;
+  logger = null;
+  constructor(repo, logger) {
+    this.repo = repo;
+    this.logger = logger;
+  }
+  function getUserInfo(id) {
+    this.logger.log("Fetching user info");
+    return this.repo.getUser(id);
+  }
+}
+
+// 禁用日志输出
+Sqoin.enableLogger(false);
+
+// 创建用户模块
+local userModule = Module(function(module) {
+  // 注册Logger工厂(每次获取创建新实例)
+  module.factory("Logger", function(sqoin, args) {
+    return Logger(args.id);
+  }, { id: 1 }); // 默认参数
+
+  // 注册UserRepository单例
+  module.single("UserRepository", function(sqoin, args) {
+    return UserRepository(sqoin.get("Logger"));
+  });
+
+  // 注册UserService工厂
+  module.factory("UserService", function(sqoin, args) {
+    return UserService(sqoin.get("UserRepository"), sqoin.get("Logger"));
+  });
+
+  // 注册简单值单例
+  module.single("name", function(sqoin, args) {
+    return "pq";
+  });
+});
+
+// 加载模块
+Sqoin.loadModules([userModule]);
+
+// 获取依赖实例
+local logger1 = Sqoin.get("Logger"); // 使用默认id=1
+local logger2 = Sqoin.get("Logger", { id: 2 }); // 自定义id=2
+
+local userService1 = Sqoin.get("UserService");
+local userService2 = Sqoin.get("UserService");
+
+// 使用服务
+userService1.getUserInfo(123);
+userService2.getUserInfo(456);
+
+// 获取简单值
+local name = Sqoin.get("name");
+print(name); // 输出: pq
+            </div>
+    </div>
+
+    <div class="section" id="advanced-operations">
+        <h2>6. 高级操作</h2>
+
+        <h3>6.1 移除模块</h3>
+        <div class="code-block">
+// 移除已加载的模块
+Sqoin.removeModule(userModule);
+        </div>
+        <p>移除模块会同时删除该模块注册的所有单例和工厂依赖</p>
+
+        <h3>6.2 依赖注入链</h3>
+        <p>Sqoin 支持依赖链，例如:</p>
+        <ul>
+            <li>Service 依赖 Repository</li>
+            <li>Repository 依赖 Logger</li>
+            <li>框架会自动解析并创建完整的依赖链</li>
+        </ul>
+    </div>
+
+    <div class="section" id="notes">
+        <h2>7. 注意事项</h2>
+        <ul>
+            <li>依赖类型标识(即 <code>single</code> 和 <code>factory</code> 方法的 <code>type</code> 参数)应保持唯一，避免冲突</li>
+            <li>单例实例在首次获取时创建，之后一直存在直到模块被移除</li>
+            <li>提供者函数中可以通过 <code>sqoin.get()</code> 获取其他依赖，形成依赖链</li>
+            <li>移除模块会清除该模块注册的所有依赖，包括已创建的单例实例</li>
+            <li>日志功能默认启用，可以通过 <code>Sqoin.enableLogger(false)</code> 禁用</li>
+        </ul>
+        <p>通过使用 Sqoin 框架，开发者可以将注意力集中在业务逻辑上，而不必关心对象的创建和依赖管理，从而提高代码的可维护性和可测试性。</p>
+    </div>
+</body>
+</html>
